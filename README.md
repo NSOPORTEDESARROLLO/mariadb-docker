@@ -2,11 +2,11 @@
 MariaDB Data Base engine
 
 # ENV Options
--MYSQL_ROOT_PASSWORD
+ MYSQL_ROOT_PASSWORD
 
 # Volumes
--/var/lib/mysql
--/etc/mysql
+*/var/lib/mysql
+*/etc/mysql
 
 # Docker Simple Run
 -docker run --name=mariadb --net=host -v /etc/localtime:/etc/localtime:ro -d  nsoporte/mariadb:tag
