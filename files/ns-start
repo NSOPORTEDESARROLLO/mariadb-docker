@@ -31,6 +31,7 @@ if [ "$LSDB" = "" ];then
         echo -n "Configurando password y usuario root........"
         mysql -e "ALTER USER 'root'@'localhost' IDENTIFIED VIA mysql_native_password;"
         mysql -e "ALTER USER 'root'@'localhost' IDENTIFIED BY '$MYSQL_ROOT_PASSWORD';"
+        mysql -e "grant all privileges on *.* to 'root'@'%' identified by '$MYSQL_ROOT_PASSWORD' with grant option;"
         killall mysqld
         sleep 8
         echo "Ok"
